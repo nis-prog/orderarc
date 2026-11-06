@@ -1,0 +1,542 @@
+# Copyright (C) 2026 Nicolás Alejandro Salinas
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: OrderArc – Order Archive for WooCommerce 0.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/orderarc\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-02T08:45:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: orderarc\n"
+
+#. Plugin Name of the plugin
+#: orderarc.php
+msgid "OrderArc – Order Archive for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: orderarc.php
+msgid "https://getorderarc.com"
+msgstr ""
+
+#. Description of the plugin
+#: orderarc.php
+msgid "Archive old WooCommerce orders without losing a single row: exact, verified and reversible. Keeps order search fast on large stores."
+msgstr ""
+
+#. Author of the plugin
+#: orderarc.php
+msgid "Nicolás Alejandro Salinas"
+msgstr ""
+
+#: includes/class-orderarc-account.php:48
+#: includes/class-orderarc-account.php:96
+msgid "Older orders"
+msgstr ""
+
+#: includes/class-orderarc-account.php:50
+#: includes/class-orderarc-account.php:57
+#: includes/class-orderarc-admin.php:605
+msgid "Order"
+msgstr ""
+
+#: includes/class-orderarc-account.php:50
+#: includes/class-orderarc-account.php:58
+#: includes/class-orderarc-admin.php:605
+msgid "Date"
+msgstr ""
+
+#: includes/class-orderarc-account.php:50
+#: includes/class-orderarc-account.php:59
+#: includes/class-orderarc-admin.php:605
+msgid "Status"
+msgstr ""
+
+#: includes/class-orderarc-account.php:50
+#: includes/class-orderarc-account.php:60
+#: includes/class-orderarc-account.php:98
+#: includes/class-orderarc-account.php:112
+#: includes/class-orderarc-admin.php:605
+#: includes/class-orderarc-admin.php:657
+#: includes/class-orderarc-admin.php:670
+msgid "Total"
+msgstr ""
+
+#: includes/class-orderarc-account.php:61
+#: includes/class-orderarc-admin.php:618
+msgid "View"
+msgstr ""
+
+#: includes/class-orderarc-account.php:98
+#: includes/class-orderarc-admin.php:657
+msgid "Item"
+msgstr ""
+
+#: includes/class-orderarc-account.php:109
+#: includes/class-orderarc-admin.php:667
+msgid "Discount"
+msgstr ""
+
+#: includes/class-orderarc-account.php:110
+#: includes/class-orderarc-account.php:126
+#: includes/class-orderarc-admin.php:653
+#: includes/class-orderarc-admin.php:668
+#: includes/class-orderarc-admin.php:674
+msgid "Shipping"
+msgstr ""
+
+#: includes/class-orderarc-account.php:111
+#: includes/class-orderarc-admin.php:669
+msgid "Tax"
+msgstr ""
+
+#: includes/class-orderarc-account.php:115
+#: includes/class-orderarc-admin.php:679
+msgid "Refunded"
+msgstr ""
+
+#: includes/class-orderarc-account.php:124
+#: includes/class-orderarc-admin.php:652
+msgid "Billing"
+msgstr ""
+
+#: includes/class-orderarc-account.php:131
+#: includes/class-orderarc-admin.php:683
+msgid "Notes"
+msgstr ""
+
+#. translators: %s: seconds
+#: includes/class-orderarc-admin.php:52
+#: includes/class-orderarc-admin.php:386
+#, php-format
+msgid "Searching orders took %s s"
+msgstr ""
+
+#. translators: %s: seconds
+#: includes/class-orderarc-admin.php:54
+#, php-format
+msgid "Search did not finish after %s s"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:70
+#: includes/class-orderarc-admin.php:382
+msgid "Archived"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:110
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: includes/class-orderarc-admin.php:152
+msgid "Settings saved."
+msgstr ""
+
+#: includes/class-orderarc-admin.php:204
+msgid "An archive or restore job is running. Pause it first."
+msgstr ""
+
+#. translators: %s: order number
+#: includes/class-orderarc-admin.php:213
+#, php-format
+msgid "Order #%s restored."
+msgstr ""
+
+#. translators: 1: first order number, 2: last order number, 3: reason
+#: includes/class-orderarc-admin.php:216
+#: includes/class-orderarc-engine.php:1179
+#, php-format
+msgid "Orders %1$s–%2$s not moved: %3$s. Nothing was changed for these orders."
+msgstr ""
+
+#: includes/class-orderarc-admin.php:310
+msgid "Overview"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:311
+msgid "Archive"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:312
+#: includes/class-orderarc-admin.php:644
+#: includes/class-orderarc-privacy.php:301
+msgid "Archived orders"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:335
+#: includes/class-orderarc-engine.php:526
+msgid "OrderArc needs a MySQL or MariaDB database. This site uses a different database, so archiving is turned off."
+msgstr ""
+
+#. translators: 1: storage when orders were archived, 2: current storage
+#: includes/class-orderarc-admin.php:356
+#, php-format
+msgid "Orders were archived while the store used %1$s. The store now uses %2$s."
+msgstr ""
+
+#: includes/class-orderarc-admin.php:372
+msgid "Order storage"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:373
+msgid "Orders in the store"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:375
+msgid "Ready to archive"
+msgstr ""
+
+#. translators: 1: list of statuses, 2: number of days
+#: includes/class-orderarc-admin.php:378
+#, php-format
+msgid "%1$s · older than %2$s days"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:381
+msgid "Skipped (orders with subscriptions or other child orders)"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:388
+msgid "Measure search speed"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:398
+msgid "Tables from other plugins linked to orders"
+msgstr ""
+
+#. translators: %s: time span, e.g. "3 mins"
+#: includes/class-orderarc-admin.php:404
+#, php-format
+msgid "last run %s ago"
+msgstr ""
+
+#. translators: %s: number
+#: includes/class-orderarc-admin.php:407
+#, php-format
+msgid "nights missed: %s"
+msgstr ""
+
+#. translators: %s: yes or no
+#: includes/class-orderarc-admin.php:409
+#, php-format
+msgid "WP-Cron disabled: %s"
+msgstr ""
+
+#. translators: %s: yes or no
+#: includes/class-orderarc-admin.php:409
+msgid "yes"
+msgstr ""
+
+#. translators: %s: yes or no
+#: includes/class-orderarc-admin.php:409
+msgid "no"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:410
+msgid "Background tasks"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:429
+#: includes/class-orderarc-admin.php:516
+msgid "I have a recent backup of the database"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:445
+msgid "Pause"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:449
+msgid "Resume"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:453
+msgid "Preview"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:457
+msgid "Archive now"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:462
+msgid "Restore all"
+msgstr ""
+
+#. translators: 1: orders, 2: refunds, 3: oldest date, 4: newest date
+#: includes/class-orderarc-admin.php:470
+#, php-format
+msgid "%1$s orders and %2$s refunds would be archived (from %3$s to %4$s)"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:486
+msgid "Statuses to archive"
+msgstr ""
+
+#. translators: %s: number input
+#: includes/class-orderarc-admin.php:493
+msgid "Older than"
+msgstr ""
+
+#. translators: %s: number input
+#: includes/class-orderarc-admin.php:493
+#, php-format
+msgid "%s days"
+msgstr ""
+
+#. translators: 1: start hour select, 2: end hour select
+#: includes/class-orderarc-admin.php:497
+msgid "Run between"
+msgstr ""
+
+#. translators: 1: start hour select, 2: end hour select
+#: includes/class-orderarc-admin.php:497
+#, php-format
+msgid "%1$s and %2$s"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:498
+msgid "Archive automatically every day"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:498
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:501
+msgid "If a night is missed"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:502
+msgid "Continue slowly"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:503
+msgid "Wait for the next night"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:505
+msgid "Save changes"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:509
+msgid "OrderArc Pro adds archive rules, WP-CLI, a monthly report, an archive in another database, and retention and GDPR tools."
+msgstr ""
+
+#: includes/class-orderarc-admin.php:509
+msgid "Learn more"
+msgstr ""
+
+#. translators: 1: number of orders, 2: number of errors
+#: includes/class-orderarc-admin.php:551
+#, php-format
+msgid "Running — %1$s order restored · %2$s errors"
+msgid_plural "Running — %1$s orders restored · %2$s errors"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of orders, 2: number of errors
+#: includes/class-orderarc-admin.php:553
+#, php-format
+msgid "Running — %1$s order archived · %2$s errors"
+msgid_plural "Running — %1$s orders archived · %2$s errors"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: time, e.g. 01:00
+#: includes/class-orderarc-admin.php:557
+#, php-format
+msgid "Waiting for the time window (opens at %s)"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:560
+msgid "Paused"
+msgstr ""
+
+#. translators: 1: number of orders, 2: minutes
+#: includes/class-orderarc-admin.php:566
+#, php-format
+msgid "Done: %1$s order restored in %2$s min"
+msgid_plural "Done: %1$s orders restored in %2$s min"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of orders, 2: minutes
+#: includes/class-orderarc-admin.php:568
+#, php-format
+msgid "Done: %1$s order in %2$s min"
+msgid_plural "Done: %1$s orders in %2$s min"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-orderarc-admin.php:599
+msgid "Search archived orders (number, email, name, phone)"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:600
+msgid "Search"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:605
+msgid "Customer"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:605
+msgid "Email"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:610
+#: includes/class-orderarc-admin.php:646
+msgid "No archived orders found."
+msgstr ""
+
+#: includes/class-orderarc-admin.php:619
+msgid "Restore"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:622
+msgid "Restore selected"
+msgstr ""
+
+#. translators: %s: number of items
+#: includes/class-orderarc-admin.php:626
+#, php-format
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-orderarc-admin.php:650
+msgid "Archived order (read-only)"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:657
+msgid "Qty"
+msgstr ""
+
+#: includes/class-orderarc-admin.php:691
+msgid "Restore this order"
+msgstr ""
+
+#. translators: %s: database name
+#: includes/class-orderarc-engine.php:99
+#, php-format
+msgid "The archive database %s cannot be reached from this site."
+msgstr ""
+
+#. translators: %s: database name
+#: includes/class-orderarc-engine.php:102
+#, php-format
+msgid "The archive database %s belongs to another copy of this site. OrderArc does not read or change it from here."
+msgstr ""
+
+#. translators: %s: database table
+#: includes/class-orderarc-engine.php:543
+#, php-format
+msgid "%s does not use InnoDB"
+msgstr ""
+
+#. translators: %s: database table
+#: includes/class-orderarc-engine.php:549
+#, php-format
+msgid "%s has triggers or foreign keys"
+msgstr ""
+
+#. translators: %s: database table
+#: includes/class-orderarc-engine.php:561
+#: includes/class-orderarc-engine.php:833
+#, php-format
+msgid "table structure differs in %s"
+msgstr ""
+
+#. translators: %s: database table
+#: includes/class-orderarc-engine.php:802
+#, php-format
+msgid "check failed in %s"
+msgstr ""
+
+#: includes/class-orderarc-engine.php:811
+#: includes/class-orderarc-engine.php:814
+msgid "archived with a different order storage"
+msgstr ""
+
+#. translators: %s: database table
+#: includes/class-orderarc-engine.php:838
+#, php-format
+msgid "conflict in %s"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:39
+#: includes/class-orderarc-privacy.php:47
+msgid "OrderArc Archived Orders"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:284
+msgid "Order Number"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:285
+msgid "Order Date"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:286
+msgid "Billing Address"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:287
+msgid "Shipping Address"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:288
+msgid "Phone Number"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:289
+msgid "Email Address"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:290
+msgid "Items Purchased"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:294
+msgid "IP Address"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:297
+msgid "Browser User Agent"
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:302
+msgid "Orders moved to the OrderArc archive."
+msgstr ""
+
+#. translators: %s: order number
+#: includes/class-orderarc-privacy.php:350
+#, php-format
+msgid "Personal data within archived order %s has been retained."
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:357
+msgid "Archived orders were not changed because an archive or restore job is running. Run the erasure again in a few minutes."
+msgstr ""
+
+#. translators: %s: order number
+#: includes/class-orderarc-privacy.php:367
+#, php-format
+msgid "Removed personal data from archived order %s."
+msgstr ""
+
+#: includes/class-orderarc-privacy.php:372
+msgid "The database did not accept the change, so archived orders were left as they were."
+msgstr ""
+
+#: includes/class-orderarc-runner.php:267
+msgid "The archive rules changed after this run started, so it was paused. Start it again to use the current rules."
+msgstr ""
+
+#: orderarc.php:98
+msgid "Pro version"
+msgstr ""
