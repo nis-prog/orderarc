@@ -63,6 +63,7 @@ function orderarc_uninstall_site() {
 		as_unschedule_all_actions( 'orderarc_pro_daily', array(), 'orderarc' );
 	}
 	wp_clear_scheduled_hook( 'orderarc_run_batch' );
+	delete_metadata( 'user', 0, 'orderarc_review', '', true );
 	foreach ( array( 'orderarc_lock', 'orderarc_due', 'orderarc_job', 'orderarc_cursor_archive', 'orderarc_cursor_restore', 'orderarc_search', 'orderarc_health' ) as $o ) {
 		delete_option( $o );
 	}

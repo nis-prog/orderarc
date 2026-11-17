@@ -33,3 +33,8 @@
 .orderarc .orderarc-rule-more select { min-width: 200px; }
 .orderarc .orderarc-rule-more input[type=number] { width: 7em; }
 .orderarc .orderarc-rule details summary { cursor: pointer; color: #2271b1; }
+
+/* Pedido de reseña */
+.orderarc-review { border-left: 4px solid #2271b1; background: #fff; padding: 10px 16px; margin: 12px 0; max-width: 1000px; }
+.orderarc-review p { margin: 0 0 8px; }
+.orderarc-review .button { margin-right: 6px; }

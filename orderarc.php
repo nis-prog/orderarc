@@ -3,7 +3,7 @@
  * Plugin Name: OrderArc – Order Archive for WooCommerce
  * Plugin URI: https://getorderarc.com
  * Description: Archive old WooCommerce orders without losing a single row: exact, verified and reversible. Keeps order search fast on large stores.
- * Version: 0.1.2
+ * Version: 0.1.3
  * Requires at least: 6.4
  * Requires PHP: 7.4
  * Author: Nicolás Alejandro Salinas
@@ -23,7 +23,7 @@ if ( defined( 'ORDERARC_PRO' ) ) {
 	return;
 }
 
-define( 'ORDERARC_VERSION', '0.1.2' );
+define( 'ORDERARC_VERSION', '0.1.3' );
 define( 'ORDERARC_DIR', __DIR__ );
 define( 'ORDERARC_FILE', __FILE__ );
 

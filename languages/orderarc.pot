@@ -2,7 +2,7 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: OrderArc – Order Archive for WooCommerce 0.1.2\n"
+"Project-Id-Version: OrderArc – Order Archive for WooCommerce 0.1.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/orderarc\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -539,4 +539,20 @@ msgstr ""
 
 #: orderarc.php:98
 msgid "Pro version"
+msgstr ""
+
+#: includes/class-orderarc-admin.php
+msgid "Is OrderArc doing its job? A short review on WordPress.org helps other store owners find it."
+msgstr ""
+
+#: includes/class-orderarc-admin.php
+msgid "Leave a review"
+msgstr ""
+
+#: includes/class-orderarc-admin.php
+msgid "Maybe later"
+msgstr ""
+
+#: includes/class-orderarc-admin.php
+msgid "Don't ask again"
 msgstr ""

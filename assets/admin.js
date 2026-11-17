@@ -3,6 +3,15 @@
 	'use strict';
 	var cfg = window.orderarc || {};
 
+	// Pedido de reseña: el enlace abre WordPress.org en otra pestaña; acá se esconde la caja.
+	var rv = document.querySelector( '[data-orderarc-review]' );
+	if ( rv ) {
+		rv.addEventListener( 'click', function () {
+			var b = document.getElementById( 'orderarc-review' );
+			if ( b ) { b.style.display = 'none'; }
+		} );
+	}
+
 	function post( action ) {
 		var body = new FormData();
 		body.append( 'action', action );

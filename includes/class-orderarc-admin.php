@@ -18,7 +18,7 @@ class OrderArc_Admin {
 	public static function init() {
 		add_action( 'admin_menu', array( __CLASS__, 'menu' ), 60 );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'assets' ) );
-		foreach ( array( 'save', 'preview', 'start', 'pause', 'resume', 'restore_all', 'restore' ) as $a ) {
+		foreach ( array( 'save', 'preview', 'start', 'pause', 'resume', 'restore_all', 'restore', 'review' ) as $a ) {
 			add_action( 'admin_post_orderarc_' . $a, array( __CLASS__, 'post_' . $a ) );
 		}
 		add_action( 'wp_ajax_orderarc_status', array( __CLASS__, 'ajax_status' ) );
@@ -126,6 +126,59 @@ class OrderArc_Admin {
 			update_option( 'orderarc_backup_ack', array( 'user' => get_current_user_id(), 'time' => time() ), false );
 		}
 		return (bool) get_option( 'orderarc_backup_ack' );
+	}
+
+	/* ---------- Pedido de reseña ---------- */
+
+	/**
+	 * Se pide una sola vez, en la pantalla de OrderArc, cuando ya hay pedidos archivados y no corre
+	 * ningún trabajo. Por usuario: 'done' (reseñó o no quiere que se le pida más) o una fecha hasta
+	 * la que queda oculto ("Maybe later" = 14 días).
+	 */
+	public static function review_due() {
+		$v = get_user_meta( get_current_user_id(), 'orderarc_review', true );
+		if ( 'done' === $v ) {
+			return false;
+		}
+		if ( $v && time() < (int) $v ) {
+			return false;
+		}
+		$st = OrderArc_Runner::job()['status'] ?? '';
+		if ( 'running' === $st || 'waiting' === $st ) {
+			return false;
+		}
+		return OrderArc_Engine::archived_count() > 0;
+	}
+
+	public static function post_review() {
+		self::guard( 'orderarc_review' );
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- nonce verificado en guard().
+		$do = isset( $_GET['do'] ) ? sanitize_key( wp_unslash( $_GET['do'] ) ) : '';
+		if ( 'later' === $do ) {
+			update_user_meta( get_current_user_id(), 'orderarc_review', time() + 14 * DAY_IN_SECONDS );
+		} else {
+			update_user_meta( get_current_user_id(), 'orderarc_review', 'done' );
+		}
+		if ( 'rate' === $do ) {
+			wp_redirect( 'https://wordpress.org/support/plugin/orderarc/reviews/#new-post' ); // phpcs:ignore WordPress.Security.SafeRedirect.wp_redirect_wp_redirect -- fixed external URL (the plugin's own review form).
+			exit;
+		}
+		self::back( 'overview' );
+	}
+
+	private static function review_box() {
+		if ( ! self::review_due() ) {
+			return;
+		}
+		$url = function ( $do ) {
+			return wp_nonce_url( admin_url( 'admin-post.php?action=orderarc_review&do=' . $do ), 'orderarc_review' );
+		};
+		echo '<div id="orderarc-review" class="orderarc-review">';
+		echo '<p>' . esc_html__( 'Is OrderArc doing its job? A short review on WordPress.org helps other store owners find it.', 'orderarc' ) . '</p>';
+		echo '<a class="button button-primary" href="' . esc_url( $url( 'rate' ) ) . '" target="_blank" rel="noopener" data-orderarc-review="1">' . esc_html__( 'Leave a review', 'orderarc' ) . '</a> ';
+		echo '<a class="button" href="' . esc_url( $url( 'later' ) ) . '">' . esc_html__( 'Maybe later', 'orderarc' ) . '</a> ';
+		echo '<a class="orderarc-review-never" href="' . esc_url( $url( 'never' ) ) . '">' . esc_html__( "Don't ask again", 'orderarc' ) . '</a>';
+		echo '</div>';
 	}
 
 	public static function post_save() {
@@ -331,6 +384,7 @@ class OrderArc_Admin {
 			echo '<div class="notice notice-error"><p>' . esc_html( OrderArc_Engine::archive_blocked() ) . '</p></div>';
 		}
 		do_action( 'orderarc_notices' );
+		self::review_box();
 		if ( ! OrderArc_Engine::db_supported() ) {
 			echo '<div class="notice notice-error"><p>' . esc_html__( 'OrderArc needs a MySQL or MariaDB database. This site uses a different database, so archiving is turned off.', 'orderarc' ) . '</p></div>';
 			if ( 'archive' === $tab ) {

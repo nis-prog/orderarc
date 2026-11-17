@@ -4,7 +4,7 @@ Tags: woocommerce, orders, archive, performance, hpos
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,9 @@ Yes. Work is done in short slices (about 20 seconds each) that fit common PHP ti
 6. My Account: customers still see their own archived orders under "Older orders".
 
 == Changelog ==
+
+= 0.1.3 =
+* Once there are archived orders, the OrderArc screen asks once for a review on WordPress.org (Maybe later hides it for 14 days; Don't ask again hides it for good).
 
 = 0.1.2 =
 * Database queries reworked so that only placeholders are added to the SQL. No change in behaviour.
