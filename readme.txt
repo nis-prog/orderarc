@@ -2,13 +2,13 @@
 Contributors: nicolassalinas
 Tags: woocommerce, orders, archive, performance, hpos
 Requires at least: 6.4
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 7.4
-Stable tag: 0.1.3
+Stable tag: 0.1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Move old WooCommerce orders out of the way so the orders screen and order search are fast again. Exact, verified and reversible.
+Archive old WooCommerce orders to fix a slow orders page and order search. Verified and reversible; reports and customer history stay intact.
 
 == Description ==
 
@@ -90,6 +90,9 @@ Yes. Work is done in short slices (about 20 seconds each) that fit common PHP ti
 6. My Account: customers still see their own archived orders under "Older orders".
 
 == Changelog ==
+
+= 0.1.4 =
+* Clearer plugin description. No change in behaviour.
 
 = 0.1.3 =
 * Once there are archived orders, the OrderArc screen asks once for a review on WordPress.org (Maybe later hides it for 14 days; Don't ask again hides it for good).
